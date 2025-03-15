@@ -1,6 +1,7 @@
 import type React from "react"
 import Link from "next/link"
-import { Car, Menu } from "lucide-react"
+import Image from "next/image" // Add this import
+import { Menu } from "lucide-react"
 import type { Metadata } from "next"
 import "./globals.css"
 
@@ -10,10 +11,11 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import Footer from "./footer"
 
+import logo from "../public/Logo-removebg-preview.png"
+
 export const metadata: Metadata = {
   title: "Car Listings - Find Your Perfect Vehicle",
   description: "Browse thousands of quality used and new cars with verified history and transparent pricing",
-    
 }
 
 export default function RootLayout({
@@ -29,8 +31,15 @@ export default function RootLayout({
             <header className="sticky top-0 z-50 w-full border-b bg-background">
               <div className="container flex h-16 items-center justify-between">
                 <Link href="/" className="flex items-center gap-2">
-                  <Car className="h-6 w-6 text-primary" />
-                  <span className="text-xl font-bold">Car Listings</span>
+                  {/* Replace Car icon with your logo image */}
+                  <Image
+                    src={logo || "/placeholder.svg"}
+                    alt="Car Listings Logo"
+                    width={70}
+                    height={50}
+                    className="h-auto w-20 max-h-20"
+                  />
+                  
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -119,6 +128,3 @@ export default function RootLayout({
   )
 }
 
-
-
-import './globals.css'

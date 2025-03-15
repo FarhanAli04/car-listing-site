@@ -57,22 +57,27 @@ export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-gray-800 py-12 md:py-20 text-white">
+      <section className="relative bg-gradient-to-r from-secondary to-secondary/80 py-12 md:py-20 text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2">
             <div className="flex flex-col justify-center space-y-4 md:space-y-6">
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight">
                 Find Your Perfect Car
               </h1>
-              <p className="text-base md:text-lg text-gray-300">
+              <p className="text-base md:text-lg text-secondary-foreground/80">
                 Browse thousands of quality used cars with verified history and transparent pricing
               </p>
 
               <div className="mt-4 flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
                   <Link href="/cars">Browse Cars</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-black hover:bg-white/10" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-secondary-foreground bg-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground/10"
+                  asChild
+                >
                   <Link href="/sell">Sell Your Car</Link>
                 </Button>
               </div>
@@ -89,7 +94,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-6 sm:mt-8 md:mt-12 rounded-xl bg-white p-3 sm:p-4 md:p-6 shadow-lg mx-auto w-full max-w-7xl">
+          <div className="mt-6 sm:mt-8 md:mt-12 rounded-xl bg-background p-3 sm:p-4 md:p-6 shadow-lg mx-auto w-full max-w-7xl">
             <Tabs defaultValue="all" className="w-full">
               <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-2 p-1 sm:p-1.5 md:p-2 rounded-md">
                 <TabsTrigger value="all" className="px-2 py-1.5 sm:py-2 text-xs sm:text-sm md:text-base font-medium">
@@ -228,11 +233,11 @@ export default function HomePage() {
             {/* SUVs */}
             <Link
               href={`/cars?category=suvs`}
-              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-gray-100"
+              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-accent"
             >
-              <div className="mb-3 rounded-full bg-gray-100 p-4 transition-all group-hover:bg-white">
+              <div className="mb-3 rounded-full bg-accent p-4 transition-all group-hover:bg-accent/50">
                 <Image
-                  src={`/placeholder.svg?height=60&width=60&text=SUV`}
+                  src={`https://www.lexus.com/content/dam/lexus/images/microsites/suvs/tiles/Lexus-GX-SUV-LEX-GXG-MY24-0072-555x400.jpg`}
                   alt="SUVs"
                   width={60}
                   height={60}
@@ -245,11 +250,11 @@ export default function HomePage() {
             {/* Sedans */}
             <Link
               href={`/cars?category=sedans`}
-              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-gray-100"
+              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-accent"
             >
-              <div className="mb-3 rounded-full bg-gray-100 p-4 transition-all group-hover:bg-white">
+              <div className="mb-3 rounded-full bg-accent p-4 transition-all group-hover:bg-accent/50">
                 <Image
-                  src={`/placeholder.svg?height=60&width=60&text=Sedan`}
+                  src={`https://s7d1.scene7.com/is/image/hyundai/2025-elantra-hev-0238-category:4-3?qlt=85,0&fmt=webp`}
                   alt="Sedans"
                   width={60}
                   height={60}
@@ -262,11 +267,11 @@ export default function HomePage() {
             {/* Trucks */}
             <Link
               href={`/cars?category=trucks`}
-              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-gray-100"
+              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-accent"
             >
-              <div className="mb-3 rounded-full bg-gray-100 p-4 transition-all group-hover:bg-white">
+              <div className="mb-3 rounded-full bg-accent p-4 transition-all group-hover:bg-accent/50">
                 <Image
-                  src={`/placeholder.svg?height=60&width=60&text=Truck`}
+                  src={`https://www.chevrolet.com/content/dam/chevrolet/na/us/english/vdc-collections/2024/trucks/colorado/nav/01-images/2024-colorado-4zr-glt-driver-front-3quarter-nav.jpg?imwidth=960`}
                   alt="Trucks"
                   width={60}
                   height={60}
@@ -279,11 +284,11 @@ export default function HomePage() {
             {/* Luxury */}
             <Link
               href={`/cars?category=luxury`}
-              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-gray-100"
+              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-accent"
             >
-              <div className="mb-3 rounded-full bg-gray-100 p-4 transition-all group-hover:bg-white">
+              <div className="mb-3 rounded-full bg-accent p-4 transition-all group-hover:bg-accent/50">
                 <Image
-                  src={`/placeholder.svg?height=60&width=60&text=Luxury`}
+                  src={`https://car-images.bauersecure.com/wp-images/3679/best-luxury-cars-2024.jpeg`}
                   alt="Luxury"
                   width={60}
                   height={60}
@@ -296,11 +301,11 @@ export default function HomePage() {
             {/* Electric */}
             <Link
               href={`/cars?category=electric`}
-              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-gray-100"
+              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-accent"
             >
-              <div className="mb-3 rounded-full bg-gray-100 p-4 transition-all group-hover:bg-white">
+              <div className="mb-3 rounded-full bg-accent p-4 transition-all group-hover:bg-accent/50">
                 <Image
-                  src={`/placeholder.svg?height=60&width=60&text=Electric`}
+                  src={`https://pscr.com.sg/wp-content/uploads/2024/10/Tesla-from-Media-Library-scaled.webp`}
                   alt="Electric"
                   width={60}
                   height={60}
@@ -313,11 +318,11 @@ export default function HomePage() {
             {/* Hybrid */}
             <Link
               href={`/cars?category=hybrid`}
-              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-gray-100"
+              className="group flex flex-col items-center rounded-lg p-4 text-center transition-all hover:bg-accent"
             >
-              <div className="mb-3 rounded-full bg-gray-100 p-4 transition-all group-hover:bg-white">
+              <div className="mb-3 rounded-full bg-accent p-4 transition-all group-hover:bg-accent/50">
                 <Image
-                  src={`/placeholder.svg?height=60&width=60&text=Hybrid`}
+                  src={`https://cdn.motor1.com/images/mgl/E63Q9q/s1/2025-toyota-camry-silver.jpg`}
                   alt="Hybrid"
                   width={60}
                   height={60}
@@ -331,7 +336,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Cars Section */}
-      <section className="bg-gray-50 py-10 md:py-16">
+      <section className="bg-accent py-10 md:py-16">
         <div className="container mx-auto px-4">
           <div className="mb-6 md:mb-8 flex items-center justify-between">
             <h2 className="text-2xl md:text-3xl font-bold">Featured Cars</h2>
@@ -345,11 +350,11 @@ export default function HomePage() {
               <Card key={car.id} className="overflow-hidden transition-all hover:shadow-md">
                 <div className="relative h-48">
                   <Image src={car.image || "/placeholder.svg"} alt={car.title} fill className="object-cover" />
-                  <div className="absolute bottom-2 left-2 rounded bg-primary px-2 py-1 text-xs font-semibold text-white">
+                  <div className="absolute bottom-2 left-2 rounded bg-primary px-2 py-1 text-xs font-semibold text-primary-foreground">
                     {car.condition}
                   </div>
                   {car.featured && (
-                    <div className="absolute right-2 top-2 rounded bg-yellow-500 px-2 py-1 text-xs font-semibold text-white">
+                    <div className="absolute right-2 top-2 rounded bg-secondary px-2 py-1 text-xs font-semibold text-secondary-foreground">
                       Featured
                     </div>
                   )}
@@ -360,7 +365,7 @@ export default function HomePage() {
                       {car.title}
                     </Link>
                   </h3>
-                  <p className="mb-3 text-sm text-gray-500">{car.location}</p>
+                  <p className="mb-3 text-sm text-muted-foreground">{car.location}</p>
                   <div className="mb-3 flex items-center text-sm">
                     <span className="mr-3">{car.year}</span>
                     <span className="mr-3">{car.mileage}</span>
@@ -391,13 +396,13 @@ export default function HomePage() {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`h-5 w-5 ${i < testimonial.rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                        className={`h-5 w-5 ${i < testimonial.rating ? "fill-secondary text-secondary" : "text-muted"}`}
                       />
                     ))}
                   </div>
-                  <p className="mb-4 text-gray-700">"{testimonial.text}"</p>
+                  <p className="mb-4 text-foreground">"{testimonial.text}"</p>
                   <div className="flex items-center">
-                    <div className="mr-3 h-10 w-10 overflow-hidden rounded-full bg-gray-200">
+                    <div className="mr-3 h-10 w-10 overflow-hidden rounded-full bg-accent">
                       <Image
                         src="/placeholder.svg?height=40&width=40"
                         alt={testimonial.name}
@@ -408,7 +413,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-gray-500">{testimonial.location}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -419,12 +424,12 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-gray-50 py-10 md:py-16">
+      <section className="bg-accent py-10 md:py-16">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 md:gap-8 md:grid-cols-2">
             <div>
               <h2 className="mb-4 text-2xl md:text-3xl font-bold">Contact Us</h2>
-              <p className="mb-6 text-gray-600">
+              <p className="mb-6 text-muted-foreground">
                 Have questions about a specific vehicle or need assistance with your car search? Our team is here to
                 help you find your perfect match.
               </p>
@@ -435,7 +440,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="mr-3 h-5 w-5 text-primary" />
-                  <span>contact@carlistings.com</span>
+                  <span>contact@lalascarsales.com</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="mr-3 h-5 w-5 text-primary" />
@@ -443,7 +448,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg bg-white p-4 md:p-6 shadow-lg">
+            <div className="rounded-lg bg-background p-4 md:p-6 shadow-lg">
               <h3 className="mb-4 text-xl font-semibold">Send Us a Message</h3>
               <form className="space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -511,7 +516,8 @@ const featuredCars = [
     condition: "Used",
     location: "Sydney, NSW",
     featured: true,
-    image: "https://hips.hearstapps.com/hmg-prod/images/2020-toyota-rav4-mmp-1-1570472132.jpg?crop=0.762xw:0.622xh;0.210xw,0.272xh&resize=2048:*",
+    image:
+      "https://hips.hearstapps.com/hmg-prod/images/2020-toyota-rav4-mmp-1-1570472132.jpg?crop=0.762xw:0.622xh;0.210xw,0.272xh&resize=2048:*",
   },
   {
     id: 2,
@@ -563,7 +569,8 @@ const featuredCars = [
     condition: "Used",
     location: "Adelaide, SA",
     featured: false,
-    image: "https://www.motortrend.com/uploads/sites/5/2018/06/2018-Ford-Mustang-GT-front-three-quarter-in-motion-02.jpg",
+    image:
+      "https://www.motortrend.com/uploads/sites/5/2018/06/2018-Ford-Mustang-GT-front-three-quarter-in-motion-02.jpg",
   },
   {
     id: 6,
@@ -576,7 +583,8 @@ const featuredCars = [
     condition: "Used",
     location: "Canberra, ACT",
     featured: false,
-    image: "https://propakistani.pk/wp-content/uploads/2020/09/Large-43083-2022Tucson-scaled-1-scaled-e1600156513669.jpg",
+    image:
+      "https://propakistani.pk/wp-content/uploads/2020/09/Large-43083-2022Tucson-scaled-1-scaled-e1600156513669.jpg",
   },
   {
     id: 7,

@@ -14,73 +14,104 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    /* Main colors based on Lala's Car Sales logo */
+    --background: 34 33% 95%;
+    --foreground: 0 0% 20%;
+
+    --card: 34 33% 95%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 34 33% 95%;
+    --popover-foreground: 0 0% 20%;
+
+    /* Red from the car and "Lala's" text */
+    --primary: 0 47% 37%;
+    --primary-foreground: 34 33% 95%;
+
+    /* Teal/blue-green from the background */
+    --secondary: 187 25% 39%;
+    --secondary-foreground: 34 33% 95%;
+
+    --muted: 187 15% 85%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 34 33% 90%;
+    --accent-foreground: 0 47% 37%;
+
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --destructive-foreground: 34 33% 95%;
+
+    --border: 187 15% 85%;
+    --input: 187 15% 85%;
+    --ring: 0 47% 37%;
+
+    /* Chart colors - adjusted to match the vintage theme */
+    --chart-1: 0 47% 37%; /* Red from car */
+    --chart-2: 187 25% 39%; /* Teal from background */
+    --chart-3: 34 33% 60%; /* Cream/tan */
+    --chart-4: 197 20% 30%; /* Darker teal */
+    --chart-5: 15 50% 40%; /* Rust/brown */
+
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Sidebar colors */
+    --sidebar-background: 34 33% 95%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 0 47% 37%;
+    --sidebar-primary-foreground: 34 33% 95%;
+    --sidebar-accent: 187 15% 85%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 187 15% 85%;
+    --sidebar-ring: 0 47% 37%;
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --background: 0 0% 15%;
+    --foreground: 34 33% 95%;
+
+    --card: 0 0% 15%;
+    --card-foreground: 34 33% 95%;
+
+    --popover: 0 0% 15%;
+    --popover-foreground: 34 33% 95%;
+
+    /* Brighter red for dark mode */
+    --primary: 0 47% 47%;
+    --primary-foreground: 34 33% 95%;
+
+    /* Darker teal for dark mode */
+    --secondary: 187 25% 29%;
+    --secondary-foreground: 34 33% 95%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 34 33% 80%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 34 33% 95%;
+
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: 34 33% 95%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 47% 47%;
+
+    /* Chart colors for dark mode */
+    --chart-1: 0 47% 57%; /* Brighter red */
+    --chart-2: 187 25% 49%; /* Brighter teal */
+    --chart-3: 34 33% 70%; /* Lighter cream */
+    --chart-4: 197 20% 40%; /* Brighter dark teal */
+    --chart-5: 15 50% 50%; /* Brighter rust */
+
+    /* Sidebar colors for dark mode */
+    --sidebar-background: 0 0% 15%;
+    --sidebar-foreground: 34 33% 95%;
+    --sidebar-primary: 0 47% 47%;
+    --sidebar-primary-foreground: 34 33% 95%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 34 33% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 47% 47%;
   }
 }
 
@@ -92,3 +123,4 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
