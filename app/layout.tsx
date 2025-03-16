@@ -1,6 +1,6 @@
 import type React from "react"
 import Link from "next/link"
-import Image from "next/image" // Add this import
+import Image from "next/image"
 import { Menu } from "lucide-react"
 import type { Metadata } from "next"
 import "./globals.css"
@@ -39,7 +39,6 @@ export default function RootLayout({
                     height={50}
                     className="h-auto w-20 max-h-20"
                   />
-                  
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -70,6 +69,12 @@ export default function RootLayout({
                   </Link>
                   <Link href="/login" className="text-sm font-medium hover:text-primary">
                     Sign In
+                  </Link>
+                  <Link
+                    href="/admin/dashboard"
+                    className="ml-2 rounded-md border border-gray-300 px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800"
+                  >
+                    Admin Login
                   </Link>
                 </div>
 
@@ -114,6 +119,12 @@ export default function RootLayout({
                       >
                         Sign In
                       </Link>
+                        <Link
+                        href="/admin/dashboard"
+                        className="flex w-full items-center justify-center rounded-md border border-gray-300 px-3 py-2 text-sm font-medium hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800 mt-2"
+                        >
+                        Admin Login
+                        </Link>
                     </nav>
                   </SheetContent>
                 </Sheet>
